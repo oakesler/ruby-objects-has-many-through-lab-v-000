@@ -1,3 +1,4 @@
+require "pry"
 class Patient 
   
   attr_accessor :name 
@@ -25,5 +26,6 @@ class Patient
     doctor_list = []
     self.appointments.each {|item| doctor_list << item.doctor}
     doctor_list
+    binding.pry
   end
 end
