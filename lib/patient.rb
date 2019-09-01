@@ -16,6 +16,7 @@ class Patient
   
   def new_appointment(date, doctor)
     Appointment.new(date, self, doctor)
+    binding.pry
   end
   
   def appointments
@@ -26,6 +27,5 @@ class Patient
     doctor_list = []
     self.appointments.each {|item| doctor_list << item.doctor}
     doctor_list
-    binding.pry
   end
 end
